@@ -50,7 +50,7 @@ a { color: inherit; }
   gap: 12px 24px;
 }
 .header-inner { min-height: 88px; }
-.footer-inner { min-height: 82px; }
+.footer-inner { min-height: 82px; padding-block: 16px; }
 .wordmark {
   display: inline-flex;
   align-items: center;
@@ -77,7 +77,21 @@ a { color: inherit; }
   text-underline-offset: .38em;
   text-decoration-color: var(--accent);
 }
-.site-footer { border-top: 1px solid var(--line); color: var(--muted); }
+.site-footer { border-top: 1px solid var(--line); background: #fff; color: var(--muted); }
+.footer-contacts { display: flex; align-items: start; gap: clamp(20px, 4vw, 58px); }
+.footer-contacts, .footer-contacts dd { margin: 0; }
+.footer-contacts dt { color: var(--ink); font-weight: 700; }
+.footer-contacts dd { font-size: .82rem; }
+.social-links { display: flex; align-items: center; }
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+}
+.social-link:hover { background: var(--wash); }
+.site-footer .social-link { width: 36px; height: 32px; padding: 0; }
+.footer-socials img { width: 16px; height: 16px; }
 
 .home {
   display: grid;
@@ -95,13 +109,15 @@ a { color: inherit; }
   padding-block: clamp(58px, 7vw, 100px);
 }
 .profile-card {
-  display: grid;
-  justify-items: center;
-  padding: 32px 22px 23px;
   background: var(--card);
   border-bottom: 4px solid var(--mint);
   box-shadow: 0 12px 32px #19393616;
   text-align: center;
+}
+.profile-identity {
+  display: grid;
+  justify-items: center;
+  padding: 32px 22px 27px;
 }
 .monogram {
   display: grid;
@@ -117,22 +133,22 @@ a { color: inherit; }
   letter-spacing: -.14em;
   white-space: nowrap;
 }
-.profile-name { font-size: 1.67rem; font-weight: 800; letter-spacing: -.05em; }
-.profile-school { margin-top: 8px; font-size: .95rem; font-weight: 700; }
-.profile-major { margin-top: 1px; color: var(--muted); font-size: .84rem; }
-.profile-location {
-  width: 100%;
-  margin-top: 17px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: .81rem;
+.profile-name { font-size: 2rem; font-weight: 800; letter-spacing: -.05em; line-height: 1.05; }
+.profile-role { font-size: .89rem; }
+.profile-role::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 4px;
+  margin: 15px auto 12px;
+  background: var(--accent);
 }
+.profile-socials { justify-content: center; gap: 10px; padding: 2px 0; background: #fff; }
 
 .hero h1 {
   font-size: clamp(2.9rem, 6vw, 4.6rem);
   font-weight: 800;
-  letter-spacing: -.08em;
+  letter-spacing: -.06em;
   line-height: 1.12;
   white-space: nowrap;
 }
@@ -210,11 +226,13 @@ a { color: inherit; }
     gap: 30px;
     padding-block: 36px 51px;
   }
-  .profile-card { padding-top: 23px; }
+  .profile-identity { padding-top: 23px; }
   .monogram { width: 92px; margin-bottom: 12px; font-size: 3.6rem; }
   .hero h1 { font-size: clamp(1.68rem, 11vw, 4rem); }
   .hero-name { margin-top: 6px; }
   .hero-links { margin-top: 18px; }
   .intro { margin-top: 18px; }
   .resume-card, .work-list li { grid-template-columns: 1fr; padding: 18px 19px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-contacts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; }
 }

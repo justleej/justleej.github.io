@@ -24,21 +24,25 @@
   <main class="home" id="main">
     <section class="hero" id="about" aria-labelledby="hero-title">
       <aside class="profile-card" aria-label="이지은 프로필">
-        <div class="monogram" aria-hidden="true">J</div>
-        <p class="profile-name">이지은</p>
-        <p class="profile-school">한국외국어대학교</p>
-        <p class="profile-major"><span lang="en">Global Business &amp; Technology</span> 전공<br>경제학 이중전공</p>
-        <p class="profile-location">경기도 안양시</p>
+        <div class="profile-identity">
+          <div class="monogram" aria-hidden="true">J</div>
+          <p class="profile-name" lang="en">Jieun<br>Lee</p>
+          <p class="profile-role">서비스 기획 · 데이터 분석</p>
+        </div>
+        <div class="social-links profile-socials">
+          <a class="social-link" href="https://github.com/justleej"><img src="assets/github.svg" width="20" height="20" alt="GitHub"></a>
+          <a class="social-link" href="https://www.linkedin.com/in/%EC%A7%80%EC%9D%80-%EC%9D%B4-1973a4443"><img src="assets/linkedin.svg" width="20" height="20" alt="LinkedIn"></a>
+        </div>
       </aside>
 
       <div class="hero-copy">
-        <h1 id="hero-title">안녕하세요.</h1>
+        <h1 id="hero-title" lang="en">Hello</h1>
         <p class="hero-name">이지은입니다.</p>
         <nav class="hero-links" aria-label="바로가기">
           <a class="action action-primary" id="experience" href="experience.html">경험 보기</a>
           <a class="action" id="projects" href="projects/index.html">프로젝트</a>
         </nav>
-        <p class="intro">서비스 기획, 사업성 검토, 데이터 분석에 관심이 있습니다.</p>
+        <p class="intro">사람들이 무엇을 고르고 왜 그렇게 고르는지 궁금합니다. 서비스를 만들어 보고 데이터를 들여다보면서 답을 찾고 있습니다.</p>
       </div>
     </section>
   </main>
@@ -46,7 +50,23 @@
   <footer class="site-footer">
     <div class="site-frame footer-inner">
       <span>이지은</span>
-      <a href="https://github.com/justleej">GitHub <span aria-hidden="true">↗</span></a>
+      <dl class="footer-contacts">
+        <div>
+          <dt>전화</dt>
+          <dd>010-0000-0000</dd>
+        </div>
+        <div>
+          <dt>이메일</dt>
+          <dd>hello@example.com</dd>
+        </div>
+        <div>
+          <dt>SNS</dt>
+          <dd class="social-links footer-socials">
+            <a class="social-link" href="https://github.com/justleej"><img src="assets/github.svg" width="20" height="20" alt="GitHub"></a>
+            <a class="social-link" href="https://www.linkedin.com/in/%EC%A7%80%EC%9D%80-%EC%9D%B4-1973a4443"><img src="assets/linkedin.svg" width="20" height="20" alt="LinkedIn"></a>
+          </dd>
+        </div>
+      </dl>
     </div>
   </footer>
 </body>
